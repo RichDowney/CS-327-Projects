@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CS327 Project 1</title>
+  <script src="frame.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>CS 327/527: Computer Networks</h1>
+    <h3>Coding Assignment #1: Framing</h3>
+    <h5>-Richard Downey</h5>
+  </header>
+  <div id="content">
+    <div>
+      <input id="sender" class="active" type="button" value="Sender" onclick="setMode('sender')" />
+      <input id="receiver" class="inactive" type="button" value="Receiver" onclick="setMode('receiver')" />
+    </div>
+    <div>
+      <label> Framing Method</label>
+      <br>
+      <select onchange="setMethod(value)">
+        <option value="byteCount">Byte Count</option>
+        <option value="byteStuffing">Byte Stuffing</option>
+        <option value="bitStuffing">Bit Stuffing</option>
+      </select>
+      <br>
+      <label>Data to Transmit</label>
+      <br>
+      <input type="text" id="input" />
+      <br>
+      <input id="submit" type="button" value="Submit" onclick="submit()" />
+      <br>
+      <label>Output:</label>
+      <br>
+      <span id=output></label>
+    </div>
+  </div>
+</body>
+</html>
